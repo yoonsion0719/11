@@ -5,25 +5,20 @@
 
 int main(void) {
 	
-	int i;
-	int grade[5];
+	char *pc;
+	int *pi;
+	double *pd;
 	
+	pc=(char*)10000;
+	pi=(int*)10000;
+	pd=(double*)10000;
 	
-	for (i=0;i<5;i++)
-	{
-		printf("grade[%i]=",i);
-		scanf("%d", &grade[i]);
-	}
+	printf("before : pc=%d, pi=%d, pd=%d\n", pc, pi, pd);
 	
-	int *ptr=grade;
-	int sum=0;
+	pc++;
+	pi++;
+	pd++;
+	printf("after : pc=%d, pi=%d, pd=%d\n", pc, pi, pd);
 	
-	
-	for (i=0;i<5;i++)
-	{
-		sum+= *(ptr+i);
-	}
-	
-	prinf("average : %d", sum/5);
 	return 0;
 }
